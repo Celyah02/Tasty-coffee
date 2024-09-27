@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Tasty-Coffee</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    
+    .menu-icon {
+      display: none;
+    }
+
+    .menu-items {
+      transition: all 0.3s ease;
+    }
+
+    .menu-items.active {
+      display: block;
+    }
+
+    
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+      color: #000;
+    }
+
+    .hover-underline-animation::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #1d4ed8;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  
+  <header class="bg-white shadow-lg">
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="text-3xl font-bold text-gray-900">Tasty-Coffee</a>
+      <div class="md:hidden">
+        <button type="button" class="menu-icon text-gray-600 hover:text-gray-900 focus:outline-none" id="menu-btn">
+          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden md:block">
+        <ul class="menu-items inline-flex space-x-4">
+          <li><a href="#" class="hover-underline-animation text-gray-600 hover:text-blue-600">Home</a></li>
+          <li><a href="#" class="hover-underline-animation text-gray-600 hover:text-blue-600">About</a></li>
+          <li><a href="#" class="hover-underline-animation text-gray-600 hover:text-blue-600">Menu</a></li>
+          <li><a href="#" class="hover-underline-animation text-gray-600 hover:text-blue-600">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+ 
+  <section class="bg-gray-200 py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h1 class="text-5xl font-bold text-gray-700">Welcome to Tasty-Coffee</h1>
+        <p class="mt-4 text-gray-600">Where quality meets comfort.</p>
+        <a href="#menu" class="mt-6 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded transition duration-300">Explore Menu</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-16">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-3xl font-bold text-gray-800">About Us</h2>
+        <p class="mt-4 text-gray-600 leading-relaxed">Welcome to Tasty-Coffee, your cozy corner in Kigali/Nyamirambo. We are more than just a café—we are a community hub where friends gather, ideas blossom, and memories are made. We aim to provide a welcoming space where the aroma of freshly brewed coffee makes you feel right at home.</p>
+      </div>
+      <div>
+        <img src="Images/coffee.jpg.png" alt="Cafe" class="rounded-lg shadow-lg">
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="menu" class="bg-gray-200 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Our Menu</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+       
+        <div class="bg-white rounded-lg shadow hover:shadow-xl transition duration-300">
+          <img src="Images/Cf1.jpg.png" alt="Caramel Iced Coffee" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Caramel Iced Coffee</h3>
+            <p class="mt-2 text-gray-600">The one and only caramel iced coffee.</p>
+            <p class="mt-4 text-gray-800 font-bold">3500 RWF</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow hover:shadow-xl transition duration-300">
+          <img src="Images/Cf2.jpg.png" alt="Hot Chocolate Coffee" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Hot Chocolate Coffee</h3>
+            <p class="mt-2 text-gray-600">Warm and comforting hot chocolate coffee.</p>
+            <p class="mt-4 text-gray-800 font-bold">2000 RWF</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow hover:shadow-xl transition duration-300">
+          <img src="Images/Cf3.jpd.png" alt="Chocolate Cake" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Creamed Chocolate Cake</h3>
+            <p class="mt-2 text-gray-600">Best chocolate cake in town.</p>
+            <p class="mt-4 text-gray-800 font-bold">500 RWF per piece</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-gray-800">Contact Us</h2>
+      <p class="mt-4 text-gray-600">68 Street, Kigali City</p>
+      <p class="mt-2 text-gray-600">Phone: 0780346222</p>
+      <p class="mt-2 text-gray-600">Email: tastycoffee@gmail.com</p>
+      <form class="mt-8 max-w-md mx-auto">
+        <div class="mb-4">
+          <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500" placeholder="Your Name">
+        </div>
+        <div class="mb-4">
+          <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500" placeholder="Your Email">
+        </div>
+        <div class="mb-4">
+          <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg">Submit</button>
+      </form>
+    </div>
+  </section>
+
+ 
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2024 Tasty-Coffee. All rights reserved.</p>
+    </div>
+  </footer>
+
+ 
